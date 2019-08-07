@@ -2,6 +2,7 @@
 node_modules
 yarn.lock
 .env
+api/src/config/db.js
 
 # IDE
 .idea
