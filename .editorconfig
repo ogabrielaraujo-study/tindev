@@ -11,6 +11,18 @@ charset = utf-8
 indent_style = tab
 indent_size = 4
 
+# html files
+[*.html]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+
+# css files
+[*.css]
+charset = utf-8
+indent_style = tab
+indent_size = 4
+
 # package.json
 [{package.json,.travis.yml}]
 indent_style = space
