@@ -1,5 +1,5 @@
 # Tindev
-Tinder Concept, desenvolvido durante a Semana Omnistack 8 da [Rocketseat](https://github.com/Rocketseat).
+Tinder Concept - desenvolvido durante a Semana Omnistack 8 da [Rocketseat](https://github.com/Rocketseat).
 
 ![Tindev Preview](https://i.imgur.com/ZJaQ7jr.gif)
 
