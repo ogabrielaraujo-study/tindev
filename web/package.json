@@ -1,7 +1,26 @@
 {
   "name": "web",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriel Araujo",
+    "email": "gabriiel66@gmail.com",
+    "url": "http://ogabrielaraujo.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ogabrielaraujo/tindev.git"
+  },
+  "scripts": {
+    "start": "serve -s build -p 3003",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "up": "pm2 start npm --name tindev_react -- start",
+    "up:dev": "pm2 start node_modules/react-scripts/scripts/start.js --name tindev_react",
+    "down": "pm2 del tindev_react"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "react": "^16.8.6",
@@ -9,12 +28,6 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "socket.io-client": "^2.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
