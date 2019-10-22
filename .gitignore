@@ -2,6 +2,7 @@
 node_modules
 yarn.lock
 .env
+/web/build
 
 # IDE
 .idea
