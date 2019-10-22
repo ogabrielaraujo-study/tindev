@@ -7,6 +7,7 @@ const db = require('./config/db')
 require('dotenv').config()
 
 const app = express()
+let server
 
 if (process.env.NODE_ENV == 'production') {
   const credentials = {
@@ -14,9 +15,9 @@ if (process.env.NODE_ENV == 'production') {
     cert: fs.readFileSync(process.env.HTTPS_CERT),
   }
 
-  const server = require('https').createServer(credentials, app)
+  server = require('https').createServer(credentials, app)
 } else {
-  const server = require('http').createServer(app)
+  server = require('http').createServer(app)
 }
 
 const io = require('socket.io')(server)
