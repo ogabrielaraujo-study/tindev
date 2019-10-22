@@ -1,12 +1,24 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const fs = require('fs')
 const routes = require('./routes')
 const db = require('./config/db')
 require('dotenv').config()
 
 const app = express()
-const server = require('http').Server(app)
+
+if (process.env.NODE_ENV == 'production') {
+  const credentials = {
+    key: fs.readFileSync(process.env.HTTPS_KEY),
+    cert: fs.readFileSync(process.env.HTTPS_CERT),
+  }
+
+  const server = require('https').createServer(credentials, app)
+} else {
+  const server = require('http').createServer(app)
+}
+
 const io = require('socket.io')(server)
 
 const connectedUsers = {}
